@@ -10,7 +10,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();                //assign methods coming from express to app variable
-const PORT = 4000;                     // assign specific port 
+const PORT = process.env.PORT || 4000;                     // assign specific port 
 
 dotEnv.config();
 app.use(cors());
@@ -34,6 +34,6 @@ app.listen (PORT,()=>{
 });
 
 // define home route
-app.use('/home',(req,res)=>{
+app.use('/',(req,res)=>{
     res.send("<h1> Welcome to SUBY");
 })        
