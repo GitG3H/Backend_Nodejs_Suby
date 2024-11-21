@@ -5,23 +5,23 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    price:{
+    price: {
         type: String,
         required: true
     },
-    category:{
+    category: {
         type: [{
             type: String,
-            enum: ['veg','non-veg']
+            enum: ['veg', 'non-veg']
         }]
     },
-    image:{
-        type: String 
-    },
-    bestSeller: {
+    image: {
         type: String
     },
-    description:{
+    bestSeller: {
+        type: Boolean
+    },
+    description: {
         type: String
     },
     firm: [{
